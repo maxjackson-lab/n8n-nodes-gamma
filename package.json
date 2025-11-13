@@ -1,0 +1,61 @@
+{
+  "name": "@gammatech/n8n-nodes",
+  "version": "0.1.0",
+  "description": "n8n community node for Gamma - Create AI-powered presentations, documents, and websites",
+  "keywords": [
+    "n8n-community-node-package",
+    "n8n",
+    "gamma",
+    "ai",
+    "presentations",
+    "documents"
+  ],
+  "license": "MIT",
+  "homepage": "https://gamma.app",
+  "author": {
+    "name": "Max Jackson",
+    "email": "max@gamma.app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gamma-app/n8n-nodes-gamma.git"
+  },
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc && gulp build:icons",
+    "dev": "tsc --watch",
+    "format": "prettier nodes credentials --write",
+    "lint": "eslint nodes credentials package.json",
+    "lintfix": "eslint nodes credentials package.json --fix",
+    "prepublishOnly": "npm run build && npm run lint -c .eslintrc.prepublish.js nodes credentials package.json"
+  },
+  "files": [
+    "dist",
+    "examples",
+    "LICENSE"
+  ],
+  "n8n": {
+    "n8nNodesApiVersion": 1,
+    "credentials": [
+      "dist/credentials/GammaApi.credentials.js"
+    ],
+    "nodes": [
+      "dist/nodes/Gamma/Gamma.node.js"
+    ]
+  },
+  "devDependencies": {
+    "@devlikeapro/n8n-openapi-node": "^0.1.4",
+    "@typescript-eslint/eslint-plugin": "^7.18.0",
+    "@typescript-eslint/parser": "^7.15.0",
+    "eslint": "^8.56.0",
+    "eslint-plugin-n8n-nodes-base": "^1.16.1",
+    "gulp": "^4.0.2",
+    "js-yaml": "^4.1.1",
+    "n8n-workflow": "^1.0.0",
+    "prettier": "^3.3.2",
+    "typescript": "^5.5.3"
+  },
+  "peerDependencies": {
+    "n8n-workflow": "*"
+  }
+}

@@ -1,0 +1,23 @@
+{
+	"node": "n8n-nodes-base.Gamma",
+	"nodeVersion": "1.0",
+	"codexVersion": "1.0",
+	"categories": [
+		"AI",
+		"Content Creation",
+		"Productivity"
+	],
+	"resources": {
+		"credentialDocumentation": [
+			{
+				"url": "https://developers.gamma.app/authentication"
+			}
+		],
+		"primaryDocumentation": [
+			{
+				"url": "https://developers.gamma.app"
+			}
+		]
+	}
+}
+
